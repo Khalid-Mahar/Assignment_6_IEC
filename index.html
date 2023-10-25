@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>BMI Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mb-4">BMI Calculator</h1>
+      <div class="form-group">
+        <label for="weight">Weight (kg)</label>
+        <input
+          type="number"
+          id="weight"
+          class="form-control"
+          step="0.01"
+          min="0"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="feet">Height (feet)</label>
+        <input
+          type="number"
+          id="feet"
+          class="form-control"
+          step="1"
+          min="0"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="inches">Height (inches)</label>
+        <input
+          type="number"
+          id="inches"
+          class="form-control"
+          step="1"
+          min="0"
+          max="11"
+          required
+        />
+      </div>
+      <button class="btn btn-primary btn-block" onclick="calculateBMI()">
+        Calculate BMI
+      </button>
+      <div class="mt-4">
+        <h4>Result:</h4>
+        <p id="result"></p>
+      </div>
+      <div class="alert alert-danger" id="error" style="display: none">
+        Please enter a positive value.
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
